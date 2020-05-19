@@ -23,8 +23,10 @@ class BasicGoods
 {
 private:
     char* brandName;
-    //GOODS_TYPE goodsType;
+    GOODS_TYPE goodsType;
     char* originCountry;
+    BasicGoods(const BasicGoods&);
+    const BasicGoods& operator=( const BasicGoods& );
 
 protected:
     PACK_TYPE packing;
@@ -33,32 +35,32 @@ protected:
     double basePrice; // value in euro or dollar :)
     double taxRate; // in percent
 
-    //void setNewPrice(double price);
+    void setNewPrice(double price);
 
 public:
     BasicGoods(const std::string& bName, GOODS_TYPE gTyp, double price);
-    //virtual ~BasicGoods();
+    virtual ~BasicGoods();
 
     constexpr static double INITIAL_TAX_RATE = 5;
 
 
     // functions
-    //virtual double getEndPrice(void) const;
-    //virtual double getTaxPrice(void) const;
+    virtual double getEndPrice(void) const;
+    virtual double getTaxPrice(void) const;
 
     // getters
-    //std::string getBrandName(void) ;
-    //virtual double getWeight(void) const;
-    //virtual double getVolume(void) const;
+    std::string getBrandName(void) ;
+    virtual double getWeight(void) const;
+    virtual double getVolume(void) const;
     std::string getOriginCountry(void) const;
 
     // setters
-    //void setOriginCountry(const std::string& cnt);
-    //void setAppearance(PACK_TYPE pck, std::shared_ptr< std::array<double,3> > dimen);
+    void setOriginCountry(const std::string& cnt);
+    void setAppearance(PACK_TYPE pck, std::shared_ptr< std::array<double,3> > dimen);
 
     // operators
-    //virtual bool operator== (const BasicGoods& in) const;
-    //virtual bool operator< (const BasicGoods& in) const;
+    virtual bool operator== (const BasicGoods& in) const;
+    virtual bool operator< (const BasicGoods& in) const;
 };
 
 
