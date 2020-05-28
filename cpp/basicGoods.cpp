@@ -10,6 +10,7 @@ BasicGoods::BasicGoods(const std::string &bName, GOODS_TYPE gTyp, double price) 
     taxRate = INITIAL_TAX_RATE;
     packing = PACK_TYPE::UNKNOWN;
     weight = 0.1;
+    brandName = const_cast<char *>(bName.c_str());
 }
 
 BasicGoods::~BasicGoods() {

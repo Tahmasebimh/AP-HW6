@@ -37,6 +37,7 @@ protected:
 
     void setNewPrice(double price);
 
+
 public:
     BasicGoods(const std::string& bName, GOODS_TYPE gTyp, double price);
     virtual ~BasicGoods();
