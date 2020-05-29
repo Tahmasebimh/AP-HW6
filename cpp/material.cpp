@@ -5,7 +5,7 @@
 #include "../h/material.h"
 
 Material::Material(const std::string &name, double price, double weight, MAT_TYPE mt)
-    : BasicGoods(name, GOODS_TYPE::CONSUMABLE, price){
+    :  BasicGoods(name, GOODS_TYPE::CONSUMABLE, price){
     this->weigth = weight;
     matType = mt;
 }

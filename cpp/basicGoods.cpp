@@ -11,6 +11,8 @@ BasicGoods::BasicGoods(const std::string &bName, GOODS_TYPE gTyp, double price) 
     packing = PACK_TYPE::UNKNOWN;
     weight = 0.1;
     brandName = const_cast<char *>(bName.c_str());
+    basePrice = price;
+    goodsType = gTyp;
 }
 
 BasicGoods::~BasicGoods() {

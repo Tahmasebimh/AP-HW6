@@ -16,7 +16,7 @@ enum class ENERGY_COST{
 };
 
 
-class Appliance : public BasicGoods {
+class Appliance : virtual public BasicGoods {
 protected:
     double weight; // which is netWeight
     ENERGY_COST energyGrade;
@@ -32,7 +32,7 @@ public:
     constexpr static double APPLIANCE_EXTRA_TAX_HIGH = 17;
     constexpr static double APPLIANCE_EXTRA_TAX_MEDIUM = 7;
 
-    bool operator==(const BasicGoods &in) const override;
+     bool operator==(const BasicGoods &in) const override ;
 
     // getter and setters
     double getWeight(void) const ;

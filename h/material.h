@@ -14,7 +14,7 @@ enum class MAT_TYPE{
     HAZARDOUS
 };
 
-class Material : public BasicGoods {
+class Material : virtual public BasicGoods {
 protected:
     double weigth;
     MAT_TYPE matType;

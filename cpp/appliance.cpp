@@ -5,7 +5,8 @@
 #include <iostream>
 #include "../h/appliance.h"
 
-Appliance::Appliance(const std::string &name, double price, double Wei) : BasicGoods(name, GOODS_TYPE::OBJECT, price) {
+Appliance::Appliance(const std::string &name, double price, double Wei)
+: BasicGoods(name, GOODS_TYPE::OBJECT, price) {
     weight = Wei;
 }
 
